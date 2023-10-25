@@ -1,0 +1,9 @@
+<app-input-task (firedChild)="addTodoTask($event)"></app-input-task>
+<div class="container p-5">
+    <h2 class="text-center text-secondary">Let's get some work done!</h2>
+    <ul class="list-group my-5">
+        <li *ngFor="let task of todoList;" class="list-group-item">
+            <app-display-task [task]="task" (removeTaskFromChild)="removeTask($event)" (unCompleteTaskFromChild)="unCompleteTask($event)" (completeTaskFromChild)="completeTask($event)"></app-display-task>
+        </li>
+    </ul>
+</div>

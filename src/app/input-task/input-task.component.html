@@ -1,0 +1,10 @@
+<div class="container bg-info p-5">
+    <h1 class="text-capitalize text-white">to-do app</h1>
+    <form>
+        <div class="mb-3">
+          <label for="task" class="form-label text-white text-capitalize">add new to-do</label>
+          <input type="text" class="form-control" id="task" name="task" placeholder="Enter new task" [value]="task" (keyup)="setValue($event)">
+        </div>
+        <button type="submit" class="btn btn-outline-light" (click)="addTaskToArray($event)">Add</button>
+      </form>
+</div>

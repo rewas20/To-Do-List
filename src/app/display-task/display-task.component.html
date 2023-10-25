@@ -1,0 +1,10 @@
+<div *ngIf="task.isCompleted;then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <button class="btn btn-dark me-3" type="submit" (click)="unCompleteTask(task)">Uncomplete</button>
+</ng-template>
+<ng-template #elseBlock>
+    <button class="btn btn-dark me-3" type="submit" (click)="completeTask(task)">Complete</button>
+</ng-template>
+<button class="btn btn-primary me-3" type="submit" (click)="removeTask(task)">Delete</button>
+<span class="fs-3" [ngClass]="{'text-decoration-line-through':task.isCompleted === true}">{{task.title}}</span>
+
